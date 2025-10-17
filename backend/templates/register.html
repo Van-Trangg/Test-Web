@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth">
+    <h2>Tạo tài khoản</h2>
+    <form method="post" class="auth-form">
+        <label for="username">Tên đăng nhập</label>
+        <input id="username" name="username" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="password">Mật khẩu</label>
+        <input id="password" name="password" type="password" required>
+
+        <label for="confirm_password">Xác nhận mật khẩu</label>
+        <input id="confirm_password" name="confirm_password" type="password" required>
+
+        <button type="submit" class="button">Đăng ký</button>
+        <p class="switch">Đã có tài khoản? <a href="{{ url_for('login') }}">Đăng nhập</a></p>
+    </form>
+</section>
+{% endblock %}

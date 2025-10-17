@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+    <h1>Chào mừng đến với Tripmate!</h1>
+    {% if username %}
+    <p>Bạn đã đăng nhập. Hãy bắt đầu khám phá các chuyến đi và điểm đến yêu thích.</p>
+    {% else %}
+    <p>Bạn cần đăng ký hoặc đăng nhập để sử dụng các tính năng Tripmate.</p>
+    <div class="cta-buttons">
+        <a class="button" href="{{ url_for('register') }}">Đăng ký</a>
+        <a class="button secondary" href="{{ url_for('login') }}">Đăng nhập</a>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}
